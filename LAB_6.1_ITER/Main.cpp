@@ -2,18 +2,14 @@
 #include <cstdlib>
 #include <ctime>
 
-const int ARRAY_SIZE = 25;
-const int LOWER_BOUND = 15;
-const int UPPER_BOUND = 94;
-
 void fillArray(int arr[]) {
-    for (int i = 0; i < ARRAY_SIZE; ++i) {
-        arr[i] = rand() % (UPPER_BOUND - LOWER_BOUND + 1) + LOWER_BOUND;
+    for (int i = 0; i < 25; ++i) {
+        arr[i] = rand() % (94 - 15 + 1) + 15;
     }
 }
 
 void printArray(const int arr[]) {
-    for (int i = 0; i < ARRAY_SIZE; ++i) {
+    for (int i = 0; i < 25; ++i) {
         std::cout << arr[i] << " ";
     }
     std::cout << std::endl;
@@ -23,7 +19,7 @@ void processArray(int arr[], int& count, int& sum) {
     count = 0;
     sum = 0;
 
-    for (int i = 0; i < ARRAY_SIZE; ++i) {
+    for (int i = 0; i < 25; ++i) {
         if (i % 2 != 0 && i % 13 != 0) {
             count++;
             sum += arr[i];
@@ -35,7 +31,7 @@ void processArray(int arr[], int& count, int& sum) {
 int main() {
     std::srand(std::time(0));
 
-    int myArray[ARRAY_SIZE];
+    int myArray[25];
     int count, sum;
 
     fillArray(myArray);
