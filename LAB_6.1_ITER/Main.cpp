@@ -11,7 +11,7 @@ void fillArray(int arr[]) {
 
 void printArray(const int arr[]) {
     for (int i = 0; i < 25; i++) {
-        std::cout << std::setw(3) << arr[i] << " ";
+        std::cout << std::setw(4) << arr[i];
     }
     std::cout << std::endl;
 }
